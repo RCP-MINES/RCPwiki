@@ -1,0 +1,56 @@
+site_name: RCP Wiki
+site_description: RCP Student Wiki — degree plans, policies, and resources
+repo_url: https://github.com/RCP-MINES/RCPwiki
+repo_name: RCP-MINES/RCPwiki
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Degree Plans:
+      - Overview: degree-plans/index.md
+  - Policies:
+      - Overview: policies/index.md
+  - Important Files:
+      - Overview: important-files/index.md
+  - Student Resources:
+      - Overview: resources/index.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
